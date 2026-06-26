@@ -1,7 +1,9 @@
 package black.model;
 
-import static black.model.Currency.Dollar;
+import lombok.ToString;
 
+import static black.model.Currency.Dollar;
+@ToString(callSuper = true)
 public final class Cash extends Payment {
 
 
