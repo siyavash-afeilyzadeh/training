@@ -18,4 +18,12 @@ public class Order {
     private double total;
     private double totalWithTax;
 
+    public double getTotal(){
+        return price * quantity;
+    }
+
+    public double getTotalWithTax(){
+        return getTotal() * 0.91F;
+    }
+
 }
