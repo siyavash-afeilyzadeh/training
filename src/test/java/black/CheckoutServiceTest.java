@@ -5,6 +5,7 @@ import black.service.CheckoutService;
 import black.service.CustomerService;
 import black.service.OrderService;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -64,9 +65,18 @@ public class CheckoutServiceTest {
 
         CustomerService .printCustomersList();
 
-        CheckoutService.checkout(customer1 , new Cash());
-        CheckoutService.checkout(customer2 , new Card());
-        CheckoutService.checkout(customer3 , new Check());
+        CheckoutService.checkout(customer1 , Card
+                .builder()
+                .cardNumber("1234567")
+                .cvv2("0456")
+                .expireDate(LocalDate.of(2030,11,11))
+                .build());
+        CheckoutService.checkout(customer2 , new Cash());
+        CheckoutService.checkout(customer3 , Check
+                .builder()
+                .bank(Bank.Meli)
+                .checkDate(LocalDate.of(2025,11,15))
+                .build());
 
 
     }
