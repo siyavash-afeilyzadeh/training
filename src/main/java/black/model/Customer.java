@@ -1,6 +1,7 @@
 package black.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -17,6 +18,8 @@ public class Customer {
     private String name;
     private String family;
     private int age;
+
+    @Builder.Default
     private List<Order> orders = new ArrayList<>();
 
 }

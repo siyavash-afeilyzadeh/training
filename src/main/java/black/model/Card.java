@@ -11,10 +11,15 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-@ToString(callSuper = true)
 
-public final class Card extends Payment {
+public final class Card implements Payment {
     private String cardNumber;
     private String cvv2;
     private LocalDate expireDate;
+
+    @Override
+    public void pay(double amount) {
+        System.out.println("Paid with Card");
+
+    }
 }

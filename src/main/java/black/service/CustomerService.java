@@ -17,10 +17,8 @@ public class CustomerService {
     }
 
     public static void printCustomersList() {
-        for (Customer customer : customers) {
-            System.out.println(customers);
-        }
+        System.out.println(customers);
     }
-
 }
+
 

@@ -11,9 +11,13 @@ import java.time.LocalDate;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(callSuper = true)
 
-public final class Check extends Payment {
+public final class Check implements Payment {
     private Bank bank;
     private LocalDate checkDate;
+
+    @Override
+   public void pay(double amount) {
+        System.out.println("Paid with Check");
+    }
 }
