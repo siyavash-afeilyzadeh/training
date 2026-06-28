@@ -15,15 +15,11 @@ public class Order {
     private String name;
     private int quantity;
     private double price;
-    private double total;
-    private double totalWithTax;
+    private Currency currency;
 
-    public double getTotal(){
+    public double getTotal() {
         return price * quantity;
     }
 
-    public double getTotalWithTax(){
-        return getTotal() * 0.91F;
-    }
 
 }

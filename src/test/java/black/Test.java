@@ -29,17 +29,17 @@ public class Test {
 //
 //        order1.getTotal();
 //        order1.getTotalWithTax();
-    public static void main(String[] args) {
-        Check check1 = Check
-                .builder()
-                .amount(256000)
-                .currency(Rial)
-                .bank(Bank.Tejarat)
-                .checkDate(LocalDate.of(2025,06,11))
-                .build();
-        System.out.println(check1);
-
-    }
+//    public static void main(String[] args) {
+//        Check check1 = Check
+//                .builder()
+//                .amount(256000)
+//                .currency(Rial)
+//                .bank(Bank.Tejarat)
+//                .checkDate(LocalDate.of(2025,06,11))
+//                .build();
+//        System.out.println(check1);
+//
+//    }
 
 }
 //}

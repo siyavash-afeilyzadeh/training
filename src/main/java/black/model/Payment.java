@@ -12,6 +12,5 @@ import lombok.experimental.SuperBuilder;
 
 public abstract class Payment {
     private double amount;
-    private Currency currency;
 
 }
